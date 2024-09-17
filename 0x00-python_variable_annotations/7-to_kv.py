@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""
-This module contais the sum_mixed_list method using typing annotaions
-"""
-from typing import Tuple
+'''Task 7's module.
+'''
+from typing import Union, Tuple
 
 
-def to_kv(k: str, v: float | int) -> Tuple:
-    """
-    to_kv method
-    """
-    return (k, float((v * v)))
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
+    '''Converts a key and its value to a tuple of the key and
+    the square of its value.
+    '''
+    return (k, float(v**2))
